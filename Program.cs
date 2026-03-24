@@ -1,17 +1,29 @@
-﻿using System.ComponentModel.Design;
-
-internal class Program
+﻿internal class Program
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Numeros Positivos y Negativos");
-        //Variables 
-        int num;
-        num = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("==PROMEDIO DE CALIFICACIONES");
+        //Variables
+        string materia;
+        int n1, n2, n3, n4, n5;
+        double promedio;
+        //Enviar info al usuario
+        Console.Write("Digite una materia");
+        materia=Console.ReadLine();
+        Console.Write("Dame 5 notas");
+        n1=Convert.ToInt32(Console.ReadLine());
+        n2=Convert.ToInt32(Console.ReadLine());
+        n3 = Convert.ToInt32(Console.ReadLine());
+        n4 = Convert.ToInt32(Console.ReadLine());
+        n5 = Convert.ToInt32(Console.ReadLine());
 
-        if (num > 0) ;
-        Console.WriteLine("Soy un numero POSITIVO");
+        //Proceso
+        promedio = (n1 + n2 + n3 + n4 + n5) / 5;
+
+        //Evaluar si gano o perdio
+        if (promedio >= 70)
+            Console.WriteLine("El promedio es " + promedio + "y el estudiante aprobo");
         else
-            Console.WriteLine("Soy un numero NEGATIVO");
+            Console.WriteLine("El promedio es" + promedio + " y el estudiante reprobo");
     }
 }
